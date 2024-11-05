@@ -1,0 +1,10 @@
+# Terraform state files and directories
+*.tfstate
+*.tfstate.*
+**/.terraform/*
+*/**/.terraform
+
+# Terragrunt files and directories
+*/**/.terragrunt-cache/
+*/**/.terraform.lock/
+*/**/.terragrunt/
