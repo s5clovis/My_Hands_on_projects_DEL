@@ -6,9 +6,9 @@ provider "aws" {
 terraform {
   required_version = ">= 1.0.0"
   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 2.0"
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.0"
     }
   }
 }
@@ -79,8 +79,6 @@ resource "aws_subnet" "private_subnets" {
 
 # Create Elastic IP for NAT Gateway
 resource "aws_eip" "nat_eip" {
-  domain = "vpc"
-
   tags = {
     Name           = "nat-eip"
     owner          = "EK TECH SOFTWARE SOLUTION"
@@ -90,6 +88,7 @@ resource "aws_eip" "nat_eip" {
     cloud_provider = "aws"
   }
 }
+
 
 # Create NAT Gateway in the first public subnet
 resource "aws_nat_gateway" "nat" {
