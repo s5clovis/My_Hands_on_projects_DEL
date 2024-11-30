@@ -7,9 +7,9 @@ if [ -z "$REPO_ROOT" ]; then
 fi
 
 # Delete terraform directories and files
-find "./project_001" -type d -name '.terraform' -exec rm -rf {} \;
-find "./project_001" -type f -name 'terraform.tfstate' -exec rm -f {} \;
-find "./project_001" -type f -name 'terraform.tfstate.backup' -exec rm -f {} \;
+find "./project_003" -type d -name '.terraform' -exec rm -rf {} \;
+find "./project_003" -type f -name 'terraform.tfstate' -exec rm -f {} \;
+find "./project_003" -type f -name 'terraform.tfstate.backup' -exec rm -f {} \;
 
 # find "./terraform/modules" -type d -name '.terraform' -exec rm -rf {} \;
 # find "./terraform/modules" -type f -name 'terraform.tfstate' -exec rm -f {} \;
